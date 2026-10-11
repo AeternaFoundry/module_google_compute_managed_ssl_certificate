@@ -1,0 +1,49 @@
+output "compute_managed_ssl_certificates_id" {
+  description = "Map of id values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no id are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.id if v.id != null && length(v.id) > 0 }
+}
+output "compute_managed_ssl_certificates_certificate_id" {
+  description = "Map of certificate_id values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no certificate_id are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.certificate_id if v.certificate_id != null }
+}
+output "compute_managed_ssl_certificates_creation_timestamp" {
+  description = "Map of creation_timestamp values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no creation_timestamp are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.creation_timestamp if v.creation_timestamp != null && length(v.creation_timestamp) > 0 }
+}
+output "compute_managed_ssl_certificates_deletion_policy" {
+  description = "Map of deletion_policy values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no deletion_policy are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.deletion_policy if v.deletion_policy != null && length(v.deletion_policy) > 0 }
+}
+output "compute_managed_ssl_certificates_description" {
+  description = "Map of description values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no description are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.description if v.description != null && length(v.description) > 0 }
+}
+output "compute_managed_ssl_certificates_expire_time" {
+  description = "Map of expire_time values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no expire_time are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.expire_time if v.expire_time != null && length(v.expire_time) > 0 }
+}
+output "compute_managed_ssl_certificates_managed" {
+  description = "Map of managed values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no managed are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => one(v.managed) if v.managed != null && length(v.managed) > 0 }
+}
+output "compute_managed_ssl_certificates_name" {
+  description = "Map of name values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no name are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.name if v.name != null && length(v.name) > 0 }
+}
+output "compute_managed_ssl_certificates_project" {
+  description = "Map of project values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no project are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.project if v.project != null && length(v.project) > 0 }
+}
+output "compute_managed_ssl_certificates_self_link" {
+  description = "Map of self_link values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no self_link are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.self_link if v.self_link != null && length(v.self_link) > 0 }
+}
+output "compute_managed_ssl_certificates_subject_alternative_names" {
+  description = "Map of subject_alternative_names values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no subject_alternative_names are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.subject_alternative_names if v.subject_alternative_names != null && length(v.subject_alternative_names) > 0 }
+}
+output "compute_managed_ssl_certificates_type" {
+  description = "Map of type values across all compute_managed_ssl_certificates, keyed the same as var.compute_managed_ssl_certificates except keys with no type are omitted"
+  value       = { for k, v in google_compute_managed_ssl_certificate.compute_managed_ssl_certificates : k => v.type if v.type != null && length(v.type) > 0 }
+}
+
